@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    background-color: #FFF6FC;
+}
+
+h3{
+   font-family: "Montserrat", serif;
+   font-size: 2em;
+   font-weight: bold;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.h1{   
+    display: flex;
+    font-size: 1em;
+    align-items: center;
+}
+
+.logo{
+    padding: 0 20px 0 20px;
+}  
+nav{
+    display: flex;
+    z-index: 1;   
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    list-style: none;
+}
+
+
+header nav a{
+    display: block;
+    text-align: center;
+
+    text-decoration: none;
+    padding: 20px;
+    transition: padding-bottom 0.7s;
+    color: black;
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+
+}
+
+header nav a:hover{
+    padding-bottom: 40px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 70px 0;
+}
+
+section h2{
+    font-size: 1.5em;
+
+}
+
+/*Seccion inicial*/
+.container-initial{
+    flex-direction: column;
+}
+
+.boxInfo{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 68%;
+    padding: 50px;
+}
+
+.boxInfo img{
+width: 50%;
+}
+
+.container-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.h2{
+    font-size: 4em;
+    text-align: center;
+}
+
+.boxInfo p{
+    font-size: 1em;
+}
+
+section:not(even){
+    flex-direction: column;
+}
+/*Seccion trabajos*/
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+
+}
+
+.title{
+    width: 80%;
+    margin-top: 57px;
+}
+
+.line{
+  height: 0.1em;
+  margin: 20px 0;
+  background-color: black;
+} 
+
+.section-left{
+    width: 30%;
+}
+
+.section-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+
+    
+}
+
+.section-right img {
+    width: 100%;
+}
+
+
+/*Seccion img*/
+.top{
+
+    height:90vh;
+    margin-bottom: 0;
+    position:relative;
+    overflow:hidden;
+    background-color:rgb(230, 53, 174);
+}
+.bottom{
+    display:flex;
+    align-items:flex-end;
+    flex-direction: row;
+    height:10vh;
+    margin-top: 0;
+    background-color:rgb(236, 109, 187);
+}
+.enlaces-hover{
+    display:block;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    flex-grow:1;
+    text-decoration:none;
+    position:relative;
+    height:10vh;
+    transition:flex-grow 0.5s, height 0.8s;
+}
+.enlaces-hover:hover{
+    flex-grow:1.5;
+    height: 11vh;
+}
+.enlaces-hover:nth-child(3n+1){
+    background-image:url('../assets/img/r01.jpg');
+}
+.enlaces-hover:nth-child(3n+2){
+    background-image:url("../assets/img/r02.jpg");
+}
+.enlaces-hover:nth-child(3n+3){
+    background-image:url("../assets/img/r03.jpg");
+}
+.enlaces-hover span{
+    color:white;
+    text-shadow:1px 1px 0 black;
+    position:absolute;
+    left:0;
+    top:-1em;
+    opacity:0;
+}
+.enlaces-hover:hover span{
+    opacity:1;
+}
+
+/*Seccion herramientas*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-template-rows: repeat(3, 100px); /* 3 filas con altura de 100px */
+    gap: 10px; /* Espacio entre los elementos */
+    max-width: 300px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+
+/*Seccion contacto*/
+form{
+    width: 30%;
+    border: 1px dsolid #DB0D66;
+    padding: 20px;
+    border-radius: 20px;
+    margin:30px 0 30px;
+}
+
+input, button{
+    display: block;
+   -webkit-appearance: none; 
+   appearance: none;
+   font-family: "Inconsolata", monospace;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+ border:none;
+ border-bottom: 1px solid #DB0D66;
+ padding: 10px;
+ width: calc(100% - 20px);
+ background-color: #FFF6FC;
+}
+
+input:focus-visible,
+textarea:focus-visible{
+    outline: 1px solid #DB0D66;
+}
+
+input[type="submit"]{
+  color:white;
+  background-color: #DB0D66;
+  border:1px solid #DB0D66;
+  border-radius: 10px;
+  padding: 15px;
+  margin:0 auto;
+  cursor:pointer;
+  transition: transform 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    color:#DB0D66;
+    background-color: #FFF6FC;
+    border:1px solid #DB0D66;
+    transform: scale(1.2);
+  }
+  
+
+form :not(:first-child){
+    margin-top: 20px;
+}
+
+.contacto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding-bottom:20px;
+    backdrop-filter:blur(20px);
+
+}
+
+.contato-izquierda{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 21%;
+    margin-left: 20px;
+}
+
+.contato-izquierda a.cv{
+    display: flex;
+    align-items: start;
+    font-size: 4em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.contato-izquierda a:hover{
+    text-decoration: solid;
+    color: #DB0D66;
+    transform: scale(1.6);
+    
+}
+
+.contato-izquierda a.cv img.flecha-cv{
+    width:40%;
+}
+
+
+.contato-izquierda ul{
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+} 
+
+.contato-izquierda ul li.txt-contacto{
+   color: #645F5F;
+}
+
+.contato-izquierda ul li a{
+    font-family: "Inconsolata", monospace;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    line-height: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.contato-izquierda ul li a:hover{
+    transform: scale(1.6);
+    color: #DB0D66;
+}
+
+.contato-derecha{
+margin-right: 20px;
+}
+.contato-derecha a.boton-whatshapp{
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+text-decoration: none;     /* Quitar subrayado */
+transition: transform 0.3s ease; /* Animación de escala */
+}
+
+
+.contato-derecha a.boton-whatshapp:hover {
+    transform: scale(1.6);
+    color: #DB0D66;
+}
+
+
+@media screen and (max-width:800px){
+    .h2 {
+        font-size: 3em;
+    }
+
+
+    .boxInfo {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        margin:0;
+    }
+
+
+    .container-info {
+        margin-top: 25px;
+    }
+
+    .section{
+        flex-direction: column;
+        margin:0px;
+    }
+
+    .section-left{
+        width: 100%;
+    }
+    
+    .section-right{
+        width: 100%;
+    }
+
+    .contacto {
+        position: relative;
+    }
+}
+
+@media screen and (max-width:430px){
+
+    header{
+            align-items: flex-start;
+            padding: 10px 0 0 0;
+        }
+
+    .h1 {
+        flex-direction: column;
+        padding: 0 0 0 10px;
+        width: 31%;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav a {
+        padding: 10px;
+    }
+
+    .title {
+        margin-top: 32px;
+    }
+    .section{
+        margin: 25px 0 0 0;
+    }
+
+    h3{
+        font-size: 1.8em;
+    }
+    p{
+        font-size: 0.8em;
+    }
+    h3, p{
+        text-align: center;
+    }
+
+    form{
+        width: 80%;
+    }
+    form, section, .section-right{
+        margin: 0;
+    }
+
+}
+
+
