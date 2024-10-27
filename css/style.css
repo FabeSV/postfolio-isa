@@ -33,6 +33,7 @@ header{
     z-index: 1;
     width: 100%;
     padding: 20px 0;
+    backdrop-filter:blur(20px);
 }
 
 .h1{   
@@ -81,7 +82,7 @@ section{
     align-items: center;
     position: relative;
     width: 100%;
-    margin: 70px 0;
+    margin: 70px 0 9px 0;
 }
 
 section h2{
@@ -92,17 +93,15 @@ section h2{
 /*Seccion inicial*/
 .container-initial{
     flex-direction: column;
+    height: 90vh;
 }
 
 .boxInfo{
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
     align-items: center;
-
     width: 68%;
-    padding: 50px;
 }
 
 .boxInfo img{
@@ -127,6 +126,8 @@ width: 50%;
 section:not(even){
     flex-direction: column;
 }
+
+
 /*Seccion trabajos*/
 
 .section{
@@ -134,12 +135,12 @@ section:not(even){
     align-items: center;
     justify-content: space-between;
     width: 80%;
+    padding: 70px 0;
 
 }
 
 .title{
     width: 80%;
-    margin-top: 57px;
 }
 
 .line{
@@ -151,14 +152,31 @@ section:not(even){
 .section-left{
     width: 30%;
 }
+.section-left p{
+    line-height: 1.5em;
+    padding: 10px 0 30px 0;
+    font-family: "Montserrat", serif;
+}
+
 
 .section-right{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 70%;
+    overflow: hidden;    
+}
 
-    
+.section-right .buttom-imagen{
+    mix-blend-mode: luminosity;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.section-right .buttom-imagen:hover{
+    mix-blend-mode: normal;
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 .section-right img {
@@ -168,7 +186,7 @@ section:not(even){
 
 /*Seccion img*/
 .top{
-
+    width: 100%;
     height:90vh;
     margin-bottom: 0;
     position:relative;
@@ -179,6 +197,7 @@ section:not(even){
     display:flex;
     align-items:flex-end;
     flex-direction: row;
+    width: 100%;
     height:10vh;
     margin-top: 0;
     background-color:rgb(236, 109, 187);
@@ -300,8 +319,6 @@ form :not(:first-child){
     position: fixed;
     width: 100%;
     bottom: 0;
-    padding-bottom:20px;
-    backdrop-filter:blur(20px);
 
 }
 
@@ -378,40 +395,67 @@ transition: transform 0.3s ease; /* Animación de escala */
 
 
 @media screen and (max-width:800px){
+
+    section{
+     margin: 35px 0;
+    }
+
     .h2 {
         font-size: 3em;
     }
 
-
     .boxInfo {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-content: center;
         align-items: center;
         margin:0;
+        height: 80vh;          
     }
-
-
+    
     .container-info {
         margin-top: 25px;
     }
 
     .section{
         flex-direction: column;
+        padding:25px 0;
         margin:0px;
     }
 
     .section-left{
         width: 100%;
     }
+
+    .section-left h3{
+    font-size: 1.7em;
+    }
+
+    .section-left p{
+        font-size: 0.8em;
+    }
     
     .section-right{
         width: 100%;
     }
 
+    form{
+        width: 80%;
+    }
+
     .contacto {
         position: relative;
     }
+
+    .contato-izquierda {
+        width: 60%;
+    }
+
+    .contato-izquierda a.cv {
+        font-size: 3em;
+    }
+
 }
 
 @media screen and (max-width:430px){
@@ -428,6 +472,9 @@ transition: transform 0.3s ease; /* Animación de escala */
         text-align: center;
     }
 
+    .h2 {
+        font-size: 1.5em;
+    }
     header nav ul {
         flex-direction: column;
     }
@@ -442,6 +489,9 @@ transition: transform 0.3s ease; /* Animación de escala */
     .section{
         margin: 25px 0 0 0;
     }
+    .section-left h3{
+        font-size: 1em;
+    }
 
     h3{
         font-size: 1.8em;
@@ -453,11 +503,22 @@ transition: transform 0.3s ease; /* Animación de escala */
         text-align: center;
     }
 
+    .grid-container {
+        grid-template-rows: repeat(3, 77px);
+        max-width: 230px;
+    }
+
     form{
         width: 80%;
     }
     form, section, .section-right{
         margin: 0;
+    }
+    .contato-izquierda ul li a{
+        font-size: 0.8em;
+    }
+    .contato-izquierda a.cv {
+        font-size: 2.5em;
     }
 
 }
