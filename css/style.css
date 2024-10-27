@@ -186,18 +186,22 @@ section:not(even){
 
 /*Seccion img*/
 .top{
-    width: 100%;
-    height:90vh;
+    width: 80%;
+    height: 120vh;
     margin-bottom: 0;
     position:relative;
     overflow:hidden;
     background-color:rgb(230, 53, 174);
 }
+
+.fondo-imagen{
+    width: 100%;
+}
 .bottom{
     display:flex;
     align-items:flex-end;
     flex-direction: row;
-    width: 100%;
+    width: 80%;
     height:10vh;
     margin-top: 0;
     background-color:rgb(236, 109, 187);
@@ -218,13 +222,37 @@ section:not(even){
     height: 11vh;
 }
 .enlaces-hover:nth-child(3n+1){
-    background-image:url('../assets/img/r01.jpg');
+    background-image:url('../assets/img/bando.webp');
 }
 .enlaces-hover:nth-child(3n+2){
-    background-image:url("../assets/img/r02.jpg");
+    background-image:url("../assets/img/coche.webp");
 }
 .enlaces-hover:nth-child(3n+3){
-    background-image:url("../assets/img/r03.jpg");
+    background-image:url("../assets/img/gaviota.webp");
+}
+.enlaces-hover:nth-child(3n+4){
+    background-image:url("../assets/img/comida.webp");
+}
+.enlaces-hover:nth-child(3n+5){
+    background-image:url("../assets/img/amigos.webp");
+}
+.enlaces-hover:nth-child(3n+6){
+    background-image:url("../assets/img/playa.webp");
+}
+.enlaces-hover:nth-child(3n+7){
+    background-image:url("../assets/img/luz.webp");
+}
+.enlaces-hover:nth-child(3n+8){
+    background-image:url("../assets/img/utreg2.webp");
+}
+.enlaces-hover:nth-child(3n+9){
+    background-image:url("../assets/img/pedro.webp");
+}
+.enlaces-hover:nth-child(3n+10){
+    background-image:url("../assets/img/mandanga.webp");
+}
+.enlaces-hover:nth-child(3n+11){
+    background-image:url("../assets/img/utreg.webp");
 }
 .enlaces-hover span{
     color:white;
