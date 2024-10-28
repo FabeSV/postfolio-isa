@@ -72,8 +72,18 @@ header nav a{
 
 }
 
-header nav a:hover{
+/*header nav a:hover{
     padding-bottom: 40px;
+    color:#DB0D66;
+    text-decoration-line:underline;
+}*/
+
+
+.close, .open{
+    display: none;
+
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 section{
@@ -96,7 +106,7 @@ section h2{
     height: 90vh;
 }
 
-.boxInfo{
+.box-info{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -104,11 +114,11 @@ section h2{
     width: 68%;
 }
 
-.boxInfo img{
+.box-info img{
 width: 50%;
 }
 
-.container-info{
+.txt-info{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,7 +129,7 @@ width: 50%;
     text-align: center;
 }
 
-.boxInfo p{
+.box-info p{
     font-size: 1em;
 }
 
@@ -185,28 +195,33 @@ section:not(even){
 
 
 /*Seccion img*/
+.section-row{
+ flex-direction: row;
+ justify-content: space-around;
+ width: 80%;
+}
+
 .top{
     width: 80%;
-    height: 120vh;
     margin-bottom: 0;
     position:relative;
     overflow:hidden;
     background-color:rgb(230, 53, 174);
 }
 
-.fondo-imagen{
+.back-img{
     width: 100%;
 }
 .bottom{
     display:flex;
     align-items:flex-end;
-    flex-direction: row;
-    width: 80%;
-    height:10vh;
+    flex-direction: column;
+    width: 6%;
+    height: 80vh;
     margin-top: 0;
     background-color:rgb(236, 109, 187);
 }
-.enlaces-hover{
+.link-hover{
     display:block;
     background-repeat:no-repeat;
     background-position:center;
@@ -214,47 +229,48 @@ section:not(even){
     flex-grow:1;
     text-decoration:none;
     position:relative;
-    height:10vh;
+    width: 100%;
+    height: 50vh;
     transition:flex-grow 0.5s, height 0.8s;
 }
-.enlaces-hover:hover{
+.link-hover:hover{
     flex-grow:1.5;
     height: 11vh;
 }
-.enlaces-hover:nth-child(3n+1){
+.link-hover:nth-child(3n+1){
     background-image:url('../assets/img/bando.webp');
 }
-.enlaces-hover:nth-child(3n+2){
+.link-hover:nth-child(3n+2){
     background-image:url("../assets/img/coche.webp");
 }
-.enlaces-hover:nth-child(3n+3){
+.link-hover:nth-child(3n+3){
     background-image:url("../assets/img/gaviota.webp");
 }
-.enlaces-hover:nth-child(3n+4){
+.link-hover:nth-child(3n+4){
     background-image:url("../assets/img/comida.webp");
 }
-.enlaces-hover:nth-child(3n+5){
+.link-hover:nth-child(3n+5){
     background-image:url("../assets/img/amigos.webp");
 }
-.enlaces-hover:nth-child(3n+6){
+.link-hover:nth-child(3n+6){
     background-image:url("../assets/img/playa.webp");
 }
-.enlaces-hover:nth-child(3n+7){
+.link-hover:nth-child(3n+7){
     background-image:url("../assets/img/luz.webp");
 }
-.enlaces-hover:nth-child(3n+8){
+.link-hover:nth-child(3n+8){
     background-image:url("../assets/img/utreg2.webp");
 }
-.enlaces-hover:nth-child(3n+9){
+.link-hover:nth-child(3n+9){
     background-image:url("../assets/img/pedro.webp");
 }
-.enlaces-hover:nth-child(3n+10){
+.link-hover:nth-child(3n+10){
     background-image:url("../assets/img/mandanga.webp");
 }
-.enlaces-hover:nth-child(3n+11){
+.link-hover:nth-child(3n+11){
     background-image:url("../assets/img/utreg.webp");
 }
-.enlaces-hover span{
+.link-hover span{
     color:white;
     text-shadow:1px 1px 0 black;
     position:absolute;
@@ -262,7 +278,7 @@ section:not(even){
     top:-1em;
     opacity:0;
 }
-.enlaces-hover:hover span{
+.link-hover:hover span{
     opacity:1;
 }
 
@@ -339,7 +355,7 @@ form :not(:first-child){
     margin-top: 20px;
 }
 
-.contacto{
+.contact{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -349,8 +365,7 @@ form :not(:first-child){
     bottom: 0;
 
 }
-
-.contato-izquierda{
+.contact-left{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -358,7 +373,7 @@ form :not(:first-child){
     margin-left: 20px;
 }
 
-.contato-izquierda a.cv{
+.contact-left a.cv{
     display: flex;
     align-items: start;
     font-size: 4em;
@@ -366,29 +381,28 @@ form :not(:first-child){
     transition: transform 0.3s ease;
 }
 
-.contato-izquierda a:hover{
+.contact-left a:hover{
     text-decoration: solid;
     color: #DB0D66;
-    transform: scale(1.6);
+    transform: scale(1.3);
     
 }
 
-.contato-izquierda a.cv img.flecha-cv{
+.contact-left a.cv img.flecha-cv{
     width:40%;
 }
 
-
-.contato-izquierda ul{
+.contact-left ul{
   display: flex;
   flex-direction: column;
   list-style-type: none;
 } 
 
-.contato-izquierda ul li.txt-contacto{
+.contact-left ul li.txt-contact{
    color: #645F5F;
 }
 
-.contato-izquierda ul li a{
+.contact-left ul li a{
     font-family: "Inconsolata", monospace;
     font-size: 1.1em;
     color: black;
@@ -398,15 +412,15 @@ form :not(:first-child){
     transition: transform 0.3s ease;
 }
 
-.contato-izquierda ul li a:hover{
-    transform: scale(1.6);
+.contact-left ul li a:hover{
+    transform: scale(1.3);
     color: #DB0D66;
 }
 
-.contato-derecha{
+.contact-right{
 margin-right: 20px;
 }
-.contato-derecha a.boton-whatshapp{
+.contat-righ a.boton-whatshapp{
 display: flex;
 justify-content: center;
 align-items: center;
@@ -416,7 +430,7 @@ transition: transform 0.3s ease; /* Animación de escala */
 }
 
 
-.contato-derecha a.boton-whatshapp:hover {
+.contact-right a.boton-whatshapp:hover {
     transform: scale(1.6);
     color: #DB0D66;
 }
@@ -424,6 +438,71 @@ transition: transform 0.3s ease; /* Animación de escala */
 
 @media screen and (max-width:800px){
 
+    nav{
+        background-color:#DB0D66;
+        position:fixed;
+        width: calc(100% - 40px);
+        height: calc(100vh - 40px);
+        top: -100vh;
+        left: 0;
+        padding: 20px;
+        transition: top 0.8s;
+     }
+    
+     .desplegado{
+      top: 0;
+     }
+    
+     nav ul{
+        display: block;
+        margin-right: 0;
+        
+     }
+    
+     nav li:not(:first-child){
+        margin-top: 20px;
+     }
+    
+     nav a{
+        font-size:4em;
+        color: white;
+     }
+     .close{
+        display: block;
+        position: absolute;
+        top:20px;
+        right: 20px;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 2em;
+        cursor: pointer;
+        
+     }
+
+     .open{
+        display: block;
+        background-color: transparent;
+        border: none;
+        margin-right: 20px;
+        padding: 5px 5px 0;
+        width: 30px;
+     }
+
+     .open span{
+        display: block;
+        background-color: black;
+        height: 2px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+     }
+
+     .open span:hover{
+        background-color: #DB0D66;
+        transform: scale(1.2);
+     }
+     
     section{
      margin: 35px 0;
     }
@@ -432,7 +511,7 @@ transition: transform 0.3s ease; /* Animación de escala */
         font-size: 3em;
     }
 
-    .boxInfo {
+    .box-info {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -442,16 +521,14 @@ transition: transform 0.3s ease; /* Animación de escala */
         height: 80vh;          
     }
     
-    .container-info {
+    .txt-info {
         margin-top: 25px;
     }
-
     .section{
         flex-direction: column;
         padding:25px 0;
         margin:0px;
     }
-
     .section-left{
         width: 100%;
     }
@@ -472,15 +549,15 @@ transition: transform 0.3s ease; /* Animación de escala */
         width: 80%;
     }
 
-    .contacto {
+    .contact {
         position: relative;
     }
 
-    .contato-izquierda {
+    .contact-left {
         width: 60%;
     }
 
-    .contato-izquierda a.cv {
+    .contact-left a.cv {
         font-size: 3em;
     }
 
@@ -489,14 +566,11 @@ transition: transform 0.3s ease; /* Animación de escala */
 @media screen and (max-width:430px){
 
     header{
-            align-items: flex-start;
             padding: 10px 0 0 0;
         }
 
     .h1 {
-        flex-direction: column;
         padding: 0 0 0 10px;
-        width: 31%;
         text-align: center;
     }
 
@@ -505,10 +579,7 @@ transition: transform 0.3s ease; /* Animación de escala */
     }
     header nav ul {
         flex-direction: column;
-    }
-
-    header nav a {
-        padding: 10px;
+        align-items:center;
     }
 
     .title {
@@ -542,10 +613,10 @@ transition: transform 0.3s ease; /* Animación de escala */
     form, section, .section-right{
         margin: 0;
     }
-    .contato-izquierda ul li a{
+    .contact-left ul li a{
         font-size: 0.8em;
     }
-    .contato-izquierda a.cv {
+    .contact-left a.cv {
         font-size: 2.5em;
     }
 

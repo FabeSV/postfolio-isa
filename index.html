@@ -19,24 +19,29 @@
 <body>
 <header>
         <h1 class="h1"><a href="#"><img class="logo"src="./assets/images/ojopez.webp" alt="Ojo pez"></a>ISA SÁNCHEZ VALERO</h1>
-
+        <button class="open">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
-                <ul>
-                    <li><a href="#trabajos">TRABAJOS</a></li>
-                    <li><a href="#info">INFO</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
-                </ul>
-	     </nav>
+            <button class="close active-close">x</button>
+            <ul>
+                <li><a href="#trabajos" class="active-close">TRABAJOS</a></li>
+                <li><a href="#info" class="active-close">INFO</a></li>
+                <li><a href="#contacto" class="active-close">CONTACTO</a></li>
+            </ul>
+        </nav>
 </header>
     <section class="container-initial"> 
-            <div class="boxInfo">   
-                    <img class="imagen-entrada" src="assets/images/foto_isa.webp" alt="imagen de isa">
-                    <div class="container-info">
+            <div class="box-info">   
+                    <img src="assets/images/foto_isa.webp" alt="imagen de isa">
+                    <div class="txt-info">
                         <h2 class="h2">DISEÑO UX/UI</h2>
                    </div> 
             </div>    
     </section>
-	<section id="trabajos" class="section_trabajos">
+	<section id="trabajos">
              <div class="title">
                 <h2>TRABAJOS</h2>
                 <div class="line"></div>
@@ -115,61 +120,50 @@
                 </div>
             </div>           
     </section>
-    <section class="top">
-        <img class="fondo-imagen" src="assets/img/bando.webp" alt="">
-    </section>
-     <section class="bottom">
-        <a class="enlaces-hover" href="assets/img/bando.webp">
-            <span>01</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/coche.webp">
-            <span>02</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/gaviota.webp">
-            <span>03</span>
-        </a> 
-        <a class="enlaces-hover" href="assets/img/comida.webp">
-            <span>04</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/amigos.webp">
-            <span>05</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/playa.webp">
-            <span>06</span>
-        </a> 
-        <a class="enlaces-hover" href="assets/img/luz.webp">
-            <span>07</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/utreg2.webp">
-            <span>08</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/pedro.webp">
-            <span>09</span>
-        </a> 
-        <a class="enlaces-hover" href="assets/img/mandanga.webp">
-            <span>10</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/utreg.webp">
-            <span>11</span>
-        </a>
-        <!--<a class="enlaces-hover" href="assets/img/r02.jpg">
-            <span>02</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/r03.jpg">
-            <span>03</span>
-        </a> 
-        <a class="enlaces-hover" href="assets/img/r01.jpg">
-            <span>01</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/r02.jpg">
-            <span>02</span>
-        </a>
-        <a class="enlaces-hover" href="assets/img/r03.jpg">
-            <span>03</span>
-        </a> -->
+
+       <section class="section-row">
+        <div class="bottom">
+            <a class="link-hover" href="assets/img/bando.webp">
+                <span>01</span>
+            </a>
+            <a class="link-hover" href="assets/img/coche.webp">
+                <span>02</span>
+            </a>
+            <a class="link-hover" href="assets/img/gaviota.webp">
+                <span>03</span>
+            </a> 
+            <a class="link-hover" href="assets/img/comida.webp">
+                <span>04</span>
+            </a>
+            <a class="link-hover" href="assets/img/amigos.webp">
+                <span>05</span>
+            </a>
+            <a class="link-hover" href="assets/img/playa.webp">
+                <span>06</span>
+            </a> 
+            <a class="link-hover" href="assets/img/luz.webp">
+                <span>07</span>
+            </a>
+            <a class="link-hover" href="assets/img/utreg2.webp">
+                <span>08</span>
+            </a>
+            <a class="link-hover" href="assets/img/pedro.webp">
+                <span>09</span>
+            </a> 
+            <a class="link-hover" href="assets/img/mandanga.webp">
+                <span>10</span>
+            </a>
+            <a class="link-hover" href="assets/img/utreg.webp">
+                <span>11</span>
+            </a>
+        </div>
+        <div class="top">
+            <img class="back-img" src="assets/img/bando.webp" alt="">
+        </div> 
+
     </section>
 
-	<section id="info">
+	<section id="info" class="info">
         <div class="title">
             <h2>INFORMACIÓN</h2>
             <div class="line"></div>
@@ -206,17 +200,17 @@
             <input type="submit" value="enviar">
             <!--<button type="submit">login</button>-->
         </form>
-        <div class="contacto">
-            <div class="contato-izquierda">
+        <div class="contact">
+            <div class="contact-left">
                     <a class="cv">CV<img src="assets/icon/flecha.svg" alt="Icono flecha" class="flecha-cv"></a>
                 <ul>
-                    <li class="txt-contacto">Contacto:</li>
+                    <li class="txt-contact">Contacto:</li>
                     <li><a href="mailto:sa.svalero@gmail.com">isa.svalero@gmail.com <img src="assets/icon/flecha.svg" alt="Icono flecha"></a></li>
                     <li><a href="https://www.linkedin.com/in/isabel-s%C3%A1nchez-valero-21304133/">Linkedin <img src="assets/icon/flecha.svg" alt="Icono flecha"></a></li>
                     <li><a href="https://www.instagram.com/isa._sv/">Instagram <img src="assets/icon/flecha.svg" alt="Icono flecha"></a></li>
                 </ul>
             </div>
-             <div class="contato-derecha">
+             <div class="contact-right">
                 <a href="https://api.whatsapp.com/send?phone=628599287=Hola, quiero contarta contigo!" class="boton-whatshapp" target="_blank">
                     <img src="assets/icon/whatsapp.svg" alt="WhatsApp">
                 </a>
