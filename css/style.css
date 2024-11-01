@@ -8,7 +8,6 @@
 
 html, body{
     scroll-behavior:smooth!important;
-
 }
 
 body{
@@ -144,7 +143,6 @@ section div:not(:first-child){
     display: flex;
     flex-direction: column;
     width: 30%;
-    /*width: 60%;*/
     max-width: 600px;
     padding: 20px;
     position: relative; /* Importante para el efecto de animación */
